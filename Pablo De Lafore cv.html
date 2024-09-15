@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo De Lafore CV</title>
+    <style>
+
+        @media print{
+
+            page{
+                box-shadow: none;
+                display: none;
+            }
+
+            body {
+                background: rgb(204, 204, 204);
+                font-family: Calibri, sans-serif;
+                font-size: 0.9em;
+            }
+
+            sidebar {
+                width: 45%;
+                height: 100%;
+                background-color: #565f67;
+                box-shadow: inset 0 0 0 10px #565f67;
+                position: relative;
+            }
+                        
+            .about {
+                background-color: #7e99b0;
+                box-shadow: inset -4px 0 0 4px #7e99b0;
+                color: white;
+            }
+
+            i.high:after {
+                content: "";
+                display: block;
+                width: 83%;
+                height: 5px;
+                border-radius: 6px;
+                background: linear-gradient(
+                    90deg,
+                    #9be69f,
+                    #9be69f 25%,
+                    #6fd7a3 25%,
+                    #6fd7a3 50%,
+                    #9be69f 50%,
+                    #9be69f 75%,
+                    #6fd7a3 75%,
+                    #6fd7a3
+                );
+                z-index: 2;
+                
+                box-shadow: inset 0 0 0 4px #6fd7a3;
+            }
+
+            i.mid:after {
+                content: "";
+                display: block;
+                width: 63%;
+                height: 5px;
+                border-radius: 6px;
+                background: linear-gradient(
+                    90deg,
+                    #fef056,
+                    #fef056 33%,
+                    #fed12f 33%,
+                    #fed12f 66%,
+                    #fef056 66%,
+                    #fef056
+                );
+                z-index: 2;
+                box-shadow: inset 0 0 0 4px #fed12f;
+            }
+
+            i.low:after {
+                content: "";
+                display: block;
+                width: 43%;
+                height: 5px;
+                border-radius: 6px;
+                background: linear-gradient(
+                    90deg,
+                    #f98090,
+                    #f98090 50%,
+                    #f7596e 50%,
+                    #f7596e
+                );
+                z-index: 2;
+                box-shadow: inset 0 0 0 4px #f7596e;
+            }
+
+            #printButton{
+                display: none;
+            }
+        }
+
+        body {
+            background: rgb(204, 204, 204);
+            font-family: Calibri, sans-serif;
+            font-size: 0.9em;
+        }
+
+        page {
+            background: white;
+            /* display: block; */
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+            display: flex;
+        }
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
+        }
+
+        sidebar {
+            width: 45%;
+            height: 100%;
+            background-color: #565f67;
+            position: relative;
+        }
+
+        /*-------------------------------------------------------*/
+
+        .imageFrame {
+            width: 80%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 10;
+            position: absolute;
+            margin: 7%;
+            top: 0%;
+            left: 3%;
+        }
+
+        .imageFrame img {
+            width: 104%;
+            height: auto;
+            position: absolute;
+            top: 0px;
+            left: -10px;
+            z-index: 0;
+            transform: rotate(-20deg);
+        }
+
+        sidebar section {
+            position: absolute;
+            top: 24%;
+            padding: 5%;
+            width: 90%;
+        }
+
+        /*-------------------------------------------------------*/
+
+        sidebar dd {
+            margin-left: 3%;
+        }
+        sidebar dl.flex dd {
+            display: flex;
+            align-items: center;
+        }
+
+        .sectionTitle {
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .reference {
+            color: #cacaca;
+        }
+
+        .description {
+            color: white;
+            margin-left: 5px;
+        }
+
+        .phonePrefix {
+            color: #cacaca;
+        }
+
+        a.link:link,
+        a.link:visited {
+            color: white;
+        }
+
+        sidebar dd.contact {
+            display: flex;
+            align-items: center;
+            margin: 3px;
+        }
+
+        i.level {
+            display: block;
+            width: 33px;
+            height: 5px;
+            border: 3px solid #776a75;
+            border-radius: 6px;
+            background: repeating-linear-gradient(
+                90deg,
+                #c4e2ff,
+                #c4e2ff 20%,
+                #a4caed 20%,
+                #a4caed 40%
+            );
+        }
+
+        i.high:after {
+            content: "";
+            display: block;
+            width: 83%;
+            height: 5px;
+            border-radius: 6px;
+            background: linear-gradient(
+                90deg,
+                #9be69f,
+                #9be69f 25%,
+                #6fd7a3 25%,
+                #6fd7a3 50%,
+                #9be69f 50%,
+                #9be69f 75%,
+                #6fd7a3 75%,
+                #6fd7a3
+            );
+            z-index: 2;
+            }
+
+        i.mid:after {
+            content: "";
+            display: block;
+            width: 63%;
+            height: 5px;
+            border-radius: 6px;
+            background: linear-gradient(
+                90deg,
+                #fef056,
+                #fef056 33%,
+                #fed12f 33%,
+                #fed12f 66%,
+                #fef056 66%,
+                #fef056
+            );
+            z-index: 2;
+        }
+
+        i.low:after {
+            content: "";
+            display: block;
+            width: 43%;
+            height: 5px;
+            border-radius: 6px;
+            background: linear-gradient(
+                90deg,
+                #f98090,
+                #f98090 50%,
+                #f7596e 50%,
+                #f7596e
+            );
+            z-index: 2;
+        }
+
+        /*------------------------------------------------*/
+
+        main {
+            margin-right: 3%;
+            margin-top: 3%;
+            width: 60%;
+        }
+
+        .about {
+            background-color: #7e99b0;
+            color: white;
+            padding: 4%;
+        }
+
+        .about p {
+            margin: 10px 0 0 0;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin: 0% 0% 0% 5%;
+        }
+
+        hr.divider {
+            border: 0.05rem solid #bbb;
+            width: 75%;
+        }
+
+        main .experience {
+            margin: 4%;
+        }
+
+        .experience {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .experience p {
+            margin: 0% 0% 0% 12%;
+        }
+
+        .experience ul {
+            font-size: 0.9rem;
+        }
+
+        .experience li {
+            margin: 5px 0;
+        }
+
+        .course{
+            margin: 14px 0;
+        }
+        
+        span.title {
+            margin-left: 10%;
+            text-decoration: underline;
+        }
+
+        span.date {
+            font-size: 0.9rem;
+            color: #888888;
+        }
+
+    </style>
+
+</head>
+<body>
+    <page size="A4">
+        <sidebar>
+            <picture class="imageFrame">
+                <img src="./Resources/images/profilePic.jpg">
+            </picture>
+            <section>
+                <dl>
+                    <dt class="sectionTitle">Contacto</dt>
+                    
+                    <dd>
+                        <span class="reference">LinkedIn:</span>
+                        <a class="link description" href="https://www.linkedin.com/in/pablo-de-lafore/" target="_blank">in/Pablo-De-Lafore</a>
+                    </dd>
+                    <dd>
+                        <span class="reference">Github:</span>
+                        <a class="link description" href="https://www.github.com/PabloDL" target="_blank">PabloDL</a>
+                    </dd>
+                    <dd>
+                        <span class="reference">Email:</span>
+                        <a class="link description" href="mailto:pablo.delafore@hotmail.com" target="_blank">pablo.delafore@hotmail.com</a>
+                    </dd>
+                    <dd>
+                        <span class="reference">Telefono:</span>
+                        <a class="link description phone" href="https://wa.me/+5491112345678" >
+                            <span class="phonePrefix">+54 9</span> 11-6825-2221
+                        </a>
+                    </dd>
+                    <dd>
+                        <span class="reference">Ubicacion:</span>
+                        <span class="description">Lomas de Zamora, Buenos Aires</span>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt class="sectionTitle">Idiomas</dt>
+                    <dd>
+                        <span class="reference">Español</span>
+                        <span class="description">(Nativo)</span>
+                    </dd>
+                    <dd>
+                        <span class="reference">Ingles</span>
+                        <span class="description">(B2)</span>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt class="sectionTitle">Habilidades Blandas</dt>
+                    <dd>
+                        <span class="reference">Pensamiento Critico</span>
+                    </dd>
+                    <dd>
+                        <span class="reference">Adaptabilidad</span>
+                    </dd>
+                    <dd>
+                        <span class="reference">Pragmatismo</span>
+                    </dd>
+                    <dd>
+                        <span class="reference">Trabajo en Equipo</span>
+                    </dd>
+                </dl>
+
+                <dl class="flex">
+                    <dt class="sectionTitle">Habilidades Técnicas</dt>
+                    
+                    <dd><span class="reference">BackEnd:</span></dd>
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">Java</span>
+                    </dd>
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">Spring Framework</span>
+                    </dd>
+                    
+                    <dd>
+                        <i class="low level"></i>
+                        <span class="description">Apache Kafka</span>
+                    </dd>
+                    <dd>
+                        <i class="low level"></i>
+                        <span class="description">gRPC</span>
+                    </dd>
+
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">.NET Framework</span>
+                    </dd>
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">C#</span>
+                    </dd>
+                    
+                </dl>
+                <dl class="flex">
+                    <dd><span class="reference">FrontEnd:</span></dd>
+
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">HTML/CSS</span>
+                    </dd>
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">Bootstrap</span>
+                    </dd>
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">Javascript</span>
+                    </dd>
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">JQuery</span>
+                    </dd>
+                    
+                </dl>
+                <dl class="flex">
+                    <dd><span class="reference">Base de Datos:</span></dd>
+                    
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">MySQL</span>
+                    </dd>
+                    <dd>
+                        <i class="mid level"></i>
+                        <span class="description">SQL Server</span>
+                    </dd>
+                    <dd>
+                        <i class="low level"></i>
+                        <span class="description">MongoDB</span>
+                    </dd>
+                </dl>
+                <dl class="flex">
+                    <dd><span class="reference">Herramientas y Librerias:</span></dd>
+
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">UML</span>
+                    </dd>
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">Jira</span>
+                    </dd>
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">Git & Github</span>
+                    </dd>
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">Maven</span>
+                    </dd>
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">D3.js (graficos de datos)</span>
+                    </dd>
+                    <dd>
+                        <i class="high level"></i>
+                        <span class="description">Geolocation API</span>
+                    </dd>
+                </dl>
+            </section>
+        </sidebar>
+        <main>
+            <section class="about">
+                <h1>Pablo De Laforé</h1>
+                <h4>Desarrollador Fullstack</h4>
+                <p>Desarrollador web con 2 años de experiencia profesional, tanto en el diseño y
+                    desarrollo de FrontEnd interactivo con diseño responsive, 
+                    como en diseño, desarrollo y mejoras de performance en Bases de datos, y APIs.  
+
+                </p>
+                <p>Busco una oportunidad de colaborar en un equipo de trabajo y rodearme de gente de la que pueda aprender y mejorar mi trayectoria profesional.</p>
+            </section>
+            <section class="experience">
+                <h4>Experiencia</h4>
+                
+                
+                <div>
+                    <span class="title">Web Developer - DtiCenter</span>
+                    <span class="date">may 2018 - may 2020</span>
+                </div>
+                <ul>
+                    <li>
+                        Diseñé, desarrollé y adapte un proyecto de migracion y 
+                        consolidacion de varios sistemas de gestionen  y nuevas herramientas
+                        en una aplicación web en ASP.NET para administración, recursos humanos,
+                        stock de productos, análisis de ventas y log de actividad.
+                    </li>
+                    <li>
+                        Utilicé Geolocation API en un mapa interactivo y D3.js para visualizacion y análisis de datos estadisticos.
+                    </li>
+                    <li>
+                        Apliqué metodologías ágiles (Scrum, Kanban) utilizando 
+                        herramientas como Jira.
+                    </li>
+                    <li>
+                        Colaboré en un equipo reducido abarcando amplias responsabilidades 
+                        para asegurar la entrega de soluciones eficientes y escalables.
+                    </li>
+                    <li>
+                        Diseñé, desarrollé, mantuve y mejore la performance de Stored Procedures, Tablas y Vistas en SQL server
+                    </li>
+                </ul>
+                
+            </section>
+            <hr class="divider">
+            <section class="experience">
+                <h4>Formacion Academica</h4>
+                
+                <div class="course">
+                    <span class="title">Licenciatura en Sistemas </span>
+                    <span class="date"> 2016 - Presente</span>
+                    <p>Universidad Nacional de Lanús</p>
+                </div>
+                
+                <div class="course">
+                    <span class="title">Java Fullstack Developer</span>
+                    <span class="date"> Mar 2024 - jul 2024 (198 hs)</span>
+                    <p>Codo a Codo</p>
+                </div>
+                
+                <div>
+                    <span class="title">Responsive Web Design</span>
+                    <span class="date"> ago 2024 - sept 2024</span>
+                    <p>FreeCodeCamp</p>
+                </div>
+            </section>
+            
+        </main>
+    </page>
+
+    <button id="printButton" onclick="window.print()">
+        Print / Save to PDF
+    </button>
+</body>
+</html>
